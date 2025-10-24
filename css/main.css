@@ -1,0 +1,46 @@
+/* CiviCRM Dashboard Styling */
+
+/* Force single-column dashboard layout */
+#civicrm-dashboard > .crm-flex-box {
+  grid-template-columns: 1fr;
+  gap:var(--crm-l);
+  margin-bottom: var(--crm-l);
+}
+
+/* make container draggable if empty */
+.crm-container .crm-flex-box > * {
+  min-height: inherit;
+}
+
+/* Show "Drag dashlets here" */
+.crm-container .crm-flex-box > .crm-flex-2,
+.crm-container .crm-flex-box > .crm-flex-3 {
+  position: relative; /* establish positioning context */
+}
+
+.crm-container .crm-flex-box > .crm-flex-2::before,
+.crm-container .crm-flex-box > .crm-flex-3::before {
+  content: "Drag dashlets here";
+  font-size: var(--crm-r);
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--crm-dashlet-dashlets-bg);
+  border: 2px dashed var(--crm-c-gray-400);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  pointer-events: none; /* allow drag/drop */
+  min-height: 100%; /* fill container vertically */
+}
+
+/* Hide the pseudo-element if the container actually has dashlets inside */
+.crm-container .crm-flex-box > .crm-flex-2:has(.crm-dashlet)::before,
+.crm-container .crm-flex-box > .crm-flex-3:has(.crm-dashlet)::before {
+  content: none;
+}
+

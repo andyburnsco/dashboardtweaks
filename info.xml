@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<extension key="dashboardtweaks" type="module">
+  <file>dashboardtweaks</file>
+  <name>dashboardtweaks</name>
+  <description>Makes the CiviCRM dashboard 1 column</description>
+  <license>AGPL-3.0</license>
+  <authors>
+    <author>
+      <name>Andy Burns</name>
+      <email>andy@civicopilot.com</email>
+      <role>Maintainer</role>
+    </author>
+  </authors>
+  <urls>
+    <url desc="Main Extension Page">https://github.com/andyburnsco/dashboardtweaks</url>
+    <url desc="Documentation">https://github.com/andyburnsco/dashboardtweaks</url>
+    <url desc="Support">https://github.com/andyburnsco/dashboardtweaks/issues</url>
+    <url desc="Licensing">https://www.gnu.org/licenses/agpl-3.0.html</url>
+  </urls>
+  <releaseDate>2025-10-24</releaseDate>
+  <version>1.0.0</version>
+  <develStage>Stable</develStage>
+  <compatibility mode="semver">
+    <ver>6.0</ver>
+  </compatibility>
+  <php_compatibility mode="list">
+    <ver>8.0</ver>
+  </php_compatibility>
+  <smarty_compatibility mode="list">
+    <ver>2</ver>
+  </smarty_compatibility>
+  <classloader>
+    <psr0 prefix="CRM_" path="."/>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
+  <civix>
+    <namespace>CRM/Dashboardtweaks</namespace>
+    <format>25.10.1</format>
+    <angularModule>crmDashboardtweaks</angularModule>
+  </civix>
+  <mixins>
+    <mixin>mgd-php@1.0.0</mixin>
+    <mixin>scan-classes@1.0.0</mixin>
+    <mixin>setting-php@1.0.0</mixin>
+    <mixin>smarty@1.0.3</mixin>
+    <mixin>setting-admin@1.0.1</mixin>
+  </mixins>
+</extension>
