@@ -11,8 +11,8 @@ return [
     'default' => 1,
     'is_domain' => 1,
     'is_contact' => 0,
-    'title' => E::ts('Enable One Column Layout'),
-    'description' => E::ts('Force the CiviCRM dashboard into a one-column layout.'),
+    'title' => E::ts('Enable One Column Dashboard Layout'),
+    'description' => E::ts('Apply a one-column layout to the main CiviCRM dashboard.'),
     'html_attributes' => [],
     'settings_pages' => [
       'display' => [
@@ -35,7 +35,7 @@ return [
     'html_attributes' => [
       'rows' => 5,
       'cols' => 60,
-      'placeholder' => E::ts('/* Add your dashboard CSS overrides here */'),
+      'placeholder' => E::ts('/* Add additional dashboard CSS here */'),
     ],
     'settings_pages' => [
       'display' => [
