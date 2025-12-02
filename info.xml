@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <extension key="dashboardtweaks" type="module">
   <file>dashboardtweaks</file>
-  <name>dashboardtweaks</name>
+  <name>Dashboard Tweaks</name>
   <description>Makes the CiviCRM dashboard 1 column</description>
   <license>AGPL-3.0</license>
   <authors>
