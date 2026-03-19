@@ -43,10 +43,4 @@ function dashboardtweaks_civicrm_dashboard($contactID, &$contentPlacement) {
   if (!empty($settings->get('dashboardtweaks_one_column'))) {
     Civi::resources()->addStyleFile('dashboardtweaks', 'css/main.css');
   }
-
-  // Append any custom CSS defined in settings
-  $customCSS = trim($settings->get('dashboardtweaks_custom_css'));
-  if (!empty($customCSS)) {
-    Civi::resources()->addStyle($customCSS);
-  }
 }
