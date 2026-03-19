@@ -17,7 +17,7 @@ return [
     'settings_pages' => [
       'display' => [
         'title'  => E::ts('Dashboard Tweaks'),
-        'weight' => 1000,
+        'weight' => 10,
       ],
     ],
   ],
@@ -40,7 +40,7 @@ return [
     'settings_pages' => [
       'display' => [
         'title'  => E::ts('Dashboard Tweaks'),
-        'weight' => 1001,
+        'weight' => 11,
       ],
     ],
   ],
