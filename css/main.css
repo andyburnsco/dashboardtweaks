@@ -3,30 +3,31 @@
 /* Force single-column dashboard layout */
 #civicrm-dashboard > .crm-flex-box {
   grid-template-columns: 1fr;
-  gap:var(--crm-l);
-  margin-bottom: var(--crm-l);
+  gap:var(--crm-l-large-1);
 }
 
-/* make container draggable if empty */
-.crm-container .crm-flex-box > * {
+/* Make container draggable if empty */
+#civicrm-dashboard .crm-flex-box > * {
   min-height: inherit;
 }
 
-/* Show "Drag dashlets here" */
-.crm-container .crm-flex-box > .crm-flex-2,
-.crm-container .crm-flex-box > .crm-flex-3 {
+/* Show "Drag dashlets here" text */
+#civicrm-dashboard .crm-flex-box > .crm-flex-2,
+#civicrm-dashboard .crm-flex-box > .crm-flex-3 {
   position: relative; /* establish positioning context */
 }
 
-.crm-container .crm-flex-box > .crm-flex-2::before,
-.crm-container .crm-flex-box > .crm-flex-3::before {
+/* Style the draggable containers */
+#civicrm-dashboard .crm-flex-box > .crm-flex-2::before,
+#civicrm-dashboard .crm-flex-box > .crm-flex-3::before {
   content: "Drag dashlets here";
+  padding:var(--crm-l-medium);
   font-size: var(--crm-r);
   color: gray;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--crm-dashlet-dashlets-bg);
+  background: var(--crm-dashlet-bg-color);
   border: 2px dashed var(--crm-c-gray-400);
   position: absolute;
   top: 50%;
@@ -39,8 +40,11 @@
 }
 
 /* Hide the pseudo-element if the container actually has dashlets inside */
-.crm-container .crm-flex-box > .crm-flex-2:has(.crm-dashlet)::before,
-.crm-container .crm-flex-box > .crm-flex-3:has(.crm-dashlet)::before {
+#civicrm-dashboard .crm-flex-box > :is(.crm-flex-2, .crm-flex-3):has(.crm-dashlet)::before,
+#civicrm-dashboard .crm-flex-box.crm-search-display-pager :is(.crm-flex-2, .crm-flex-3)::before {
   content: none;
 }
 
+ #civicrm-dashboard {
+  margin-bottom: var(--crm-l-large); /* gap above footer */ 
+ }
